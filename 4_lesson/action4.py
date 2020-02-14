@@ -4,9 +4,11 @@ cont = True
 
 while cont:
     index = i % 4
-    print(cart[index])
-    answer = input('Press enter to continue or "q" to quit: ')
-    if answer == 'q':
+    print (cart[index])
+    user_input = input('For continue press \'Enter\', for quit press \'q\' ')
+    if  user_input == 'q':
         cont = False
     else:
         i = i + 1
+
+
