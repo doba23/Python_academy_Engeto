@@ -3,6 +3,4 @@ color_counts = {}
 
 while colors:
     color = colors.pop()
-    if color not in color_counts:
-        color_counts[color]=0
-    color_counts[color] = color_counts[color] + 1
+    color_counts[color] = color_counts.get(color,0) + 1
