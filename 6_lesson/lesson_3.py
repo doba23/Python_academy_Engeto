@@ -17,8 +17,10 @@ position = 0
 
 for word in text_split:
     if search_word == word:
-        print ('SEARCH OWRD:', word)
+        print ('SEARCH WORD:', word)
         print ('POSITION', position)
+        break
     position = position + 1
 else :
-    print ('NO SUCH A WORD', search_word)
+    print('SEARCH OWRD:', search_word)
+    print ('NO SUCH A WORD')
