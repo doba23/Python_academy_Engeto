@@ -1,7 +1,7 @@
 number = int (input('Please enter your number:'))
 numbers = []
 
-#make list with all values with its exponent
+#make list with all values and their exponents
 index = 0
 while len(numbers) < number:
     numbers.insert(index,((index+1)**(index+1)))
