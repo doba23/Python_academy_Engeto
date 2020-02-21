@@ -14,7 +14,6 @@ reggistered = {'bob':'123',
 index = 1
 while index:
     if  reggistered.get(username) == password:
-        index = 0
         break
     else:
         print('wrong password')
