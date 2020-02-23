@@ -9,4 +9,3 @@ if int(time_list[0]) > 12:
     am_pm = 'PM'
 
 print ('Converted to English: ',str(english_time)+' : '+time_list[1], am_pm )
-
