@@ -4,7 +4,8 @@ lenght_of_desk = int (input('Type lenght of desk:'))
 
 for_outer = (lenght_of_desk // 2)
 for_inner = for_outer
-for_outer += 1 if (lenght_of_desk % 2) == 1
+if (lenght_of_desk % 2) == 1:
+    for_outer += 1
 
 
 print (for_outer)
