@@ -1,14 +1,12 @@
 lenght_of_desk = int (input('Type lenght of desk:'))
 
-# create outer range based on input
+# create outer and inner range based on input
 
-for_1 = (lenght_of_desk // 2)
-print(for_1)
-if ((lenght_of_desk) % 2) == 1:
-    for_1 += 1
+for_outer = (lenght_of_desk // 2)
+for_inner = for_outer
+if (lenght_of_desk % 2) == 1:
+    for_outer += 1
 
-print (for_1)
-# inner range
-
-
+print (for_outer)
+print (for_inner)
 # for i in range(len(lenght_of_desk))
