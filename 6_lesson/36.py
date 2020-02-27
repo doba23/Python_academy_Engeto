@@ -7,12 +7,12 @@ for_inner = for_outer
 if (lenght_of_desk % 2) == 1:
     for_outer += 1
 
+# print (for_outer)
+# print (for_inner)
 
-print (for_outer)
-print (for_inner)
 # for i in range(len(lenght_of_desk))
 for i in range(6):
-
+    print('* ', end="")
     for j in range(for_inner):
-        print('* ', end="")
+        print(' *', end="")
     print('')
