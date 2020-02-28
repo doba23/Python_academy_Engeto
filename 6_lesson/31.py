@@ -2,5 +2,7 @@ sentence = 'A speech sound that is produced by comparatively open configuration 
 
 for i in sentence:
     if sentence.find('a' or 'e' or 'i' or 'o' or 'u' or 'y'):
-        count_
+        count_vowel +=1
+    else:
+        count_cons +=1
 
