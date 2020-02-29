@@ -12,7 +12,7 @@ for i in range (for_outer):
     chess.append(symbol)
     chess.append(' ')
 chess = chess [:lenght_of_desk]
-print (chess)
+
 
 
 # print (for_outer)
