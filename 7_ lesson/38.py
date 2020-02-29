@@ -7,19 +7,14 @@ def my_min(sequence):
     return min
 
 print (my_min('iosdfheons'))
-# a = 'dfheons'
-# print(a[-1])
 
 def my_max (sequnece_2):
     max = sequnece_2 [-1]
     for j in sequnece_2 [:-1]:
-        print ('max')
-        if max < j:
+        # print (j, 'for')
+        if j > max:
+            # print(j, 'pokud je j vetsi nez max, uloz novy max')
             max = j
     return  max
-
-
-
-
 
 print (my_max('iozsdfheons'))
