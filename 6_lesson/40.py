@@ -1,29 +1,28 @@
-def all (own_list):
-    boolean = 'False' if own_list != 1 else 'True'
+def my_all (own_list, minLength = '', maxLength = ''):
+    boolean = 0 if bool (own_list) == 0 else 1
 
     for item in own_list:
         boolean = (bool (item))
         # print(item, boolean)
         if (bool (item)) == 0:
-            boolean = 'False'
-            break
+            boolean = 0
 
-    return boolean
-# print (all([]))
+    return bool (boolean)
+print (my_all(''))
 
-def any (my_list):
-    boolean_2 = 'False' if bool (my_list) == 0 else 'True'
+def my_any (my_list):
+    boolean_2 = 0 if bool (my_list) == 0 else 1
     # print('Boolean od list' boolean_2)
-    if boolean_2 == 'True':
-        boolean_2 = 'False'
+    if boolean_2 == 1:
+        boolean_2 = 0
         # print (boolean_2 == 1, 'second step')
         for item_2 in my_list:
             # print('run of for loop')
             if bool(item_2) == 1:
-                boolean_2 = 'True'
+                boolean_2 = 1
                 break
             else:
                 continue
-    return boolean_2
+    return bool (boolean_2)
 
-# print (any([1,0,1,0,0,1,0]))
+print (my_any([0,0]))
