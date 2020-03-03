@@ -1,12 +1,10 @@
-def my_all (own_list, minLength = '', maxLength = ''):
-    boolean = 0 if bool (own_list) == 0 else 1
-
+def my_all (own_list):
+    boolean = 1 if (own_list) == '' else 0
     for item in own_list:
         boolean = (bool (item))
         # print(item, boolean)
         if (bool (item)) == 0:
             boolean = 0
-
     return bool (boolean)
 print (my_all(''))
 
