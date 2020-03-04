@@ -5,4 +5,4 @@ def reverse (my_str):
         reversed.append(my_str.pop())
     return reversed
 
-# print (reverse('abcdefgh'))
+print (reverse('abcdefgh'))
