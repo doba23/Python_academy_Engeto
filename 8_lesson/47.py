@@ -1,14 +1,14 @@
 
-def all_anagrams (args):
+def all_anagrams (*args):
     for item in args:
-        print (set(item))
-        print (set(args[0]))
+        #print (item)
+        #print (args[0])
         if (set(item)).issubset(set(args[0])):
             bol = True
-            print ('if ')
+            #print ('if ')
         else:
-            print ('else')
+            #print ('else')
             bol = False
-    return (bol)
+    return bol
 
-print(all_anagrams (['ship', 'ihps', 'hips']))
+print(all_anagrams ('ship', 'ihps', 'hips','spih'))
