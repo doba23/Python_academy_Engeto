@@ -38,12 +38,24 @@ def numeric_mail (all):
             # print (number)
             if number.isnumeric():
                 numeric_mail_list.add(item)
-    return numeric_mail_list
-print  (numeric_mail(all_email(my_list)))
+    return list(numeric_mail_list)
+# print  (numeric_mail(all_email(my_list)))
 
-# dictionary
-domains = []
-for item in all_email(my_list):
-    domains = item.split('@')
 
-print (domains)
+# domains
+def domains (d):
+    domains_split = []
+    domains_list = []
+    for item in all_email(my_list):
+        domains_split = (item.split('@'))
+        domains_list.append(domains_split[1])
+    return (domains_list)
+# print (domains(all_email(my_list)))
+
+# main function
+def main (a):
+    result = {}
+    result['domains'] = domains(all_email(my_list))
+    result['emails_with_nums'] = numeric_mail(all_email(my_list))
+    return result
+print(main(''))
