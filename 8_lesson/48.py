@@ -19,37 +19,25 @@ my_list = my_str.split()
 # print(my_list)
 
 # colect all_email function
-def all_email (my_list):
+def all_email (my):
     emails = []
-    for item in my_list:
+    for item in my:
         # print (item.find('@'))
         if item.find('@') != -1:
             emails.append(item)
     return emails
+# print (all_email(my_list))
 
-print (all_email(my_list))
-
-
-emails = ['tiger123@email.cz', 'cnn@info.com', 'abc@gmail.com', 'b2b@money.fr', 'spam@info.cz.']
-numeric_mail_list = set ()
-# print (type (numeric_mail_list))
-for item in emails:
-    #print (item)
-    for number in item:
-        # print (number)
-        if number.isnumeric():
-            numeric_mail_list.add(item)
-print  (numeric_mail_list)
-
-# pokus o list
-# def numeric_mail (all_email):
-#     numeric_mail_list = set ()
-#     for item in all_email:
-#         #print (item)
-#         for number in item:
-#             # print (number)
-#             if number.isnumeric():
-#                 numeric_mail_list.add(item)
-#
-# print  (numeric_mail(all_email(my_list)))
+# print emails with numeric
+def numeric_mail (all):
+    # print (all)
+    numeric_mail_list = set ()
+    for item in all:
+        # print (item)
+        for number in item:
+            # print (number)
+            if number.isnumeric():
+                numeric_mail_list.add(item)
+    return numeric_mail_list
+print  (numeric_mail(all_email(my_list)))
 
