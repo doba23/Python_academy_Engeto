@@ -41,3 +41,9 @@ def numeric_mail (all):
     return numeric_mail_list
 print  (numeric_mail(all_email(my_list)))
 
+# dictionary
+domains = []
+for item in all_email(my_list):
+    domains = item.split('@')
+
+print (domains)
