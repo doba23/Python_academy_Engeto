@@ -1,28 +1,26 @@
-# welcome user, save login
-print('Welcome to the app. Please log in:')
-username = input ('USERNAME: ')
-password = input ('PASSWORD: ')
-
-# login names
-reggistered = {'bob':'123',
-'ann' : 'pass123',
-'mike' : 'password123',
-'liz' : 'pass123' }
-
-# if login sucessful continue main program,
-# if not repeat login again and again
-index = 1
-while index:
-    if  reggistered.get(username) == password:
-        break
-    else:
-        print('wrong password')
-        username = input('USERNAME: ')
-        password = input('PASSWORD: ')
-
-print('main program here')
-
-
+# # welcome user, save login
+# print('Welcome to the app. Please log in:')
+# username = input ('USERNAME: ')
+# password = input ('PASSWORD: ')
+#
+# # login names
+# reggistered = {'bob':'123',
+# 'ann' : 'pass123',
+# 'mike' : 'password123',
+# 'liz' : 'pass123' }
+#
+# # if login sucessful continue main program,
+# # if not repeat login again and again
+# index = 1
+# while index:
+#     if  reggistered.get(username) == password:
+#         break
+#     else:
+#         print('wrong password')
+#         username = input('USERNAME: ')
+#         password = input('PASSWORD: ')
+print ('We have 3 texts to be analyzed.')
+index_of_texts = int (input ('Enter a number btw. 1 and 3 to select:')) -1
 
 '''
 author = 
@@ -56,3 +54,55 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish, 
 garpike and stingray are also present.'''
 ]
+#   save chosed text as a word list
+chosed_text = (TEXTS[index_of_texts]).split()
+
+# count total words
+def total_words (text):
+    total = 0
+    for word in text:
+        total += 1
+    return (total)
+
+# count titlecase words
+def titlecase (text):
+    count = 0
+    for word in text:
+        if word[0].isupper():
+            count += 1
+    return (count)
+
+# count uppercase words
+def uppercase (text):
+    count = 0
+    for word in text:
+        if word.isupper():
+            count += 1
+    return (count)
+
+# count lowercase words
+def lowercase (text):
+    count = 0
+    for word in text:
+        if word.islower():
+            count += 1
+    return (count)
+
+# count number strings
+def number_string (text):
+    count = 0
+    for word in text:
+        if word.isnumeric():
+            count += 1
+    return (count)
+
+
+print ('There are', total_words(chosed_text), 'words in selected text.')
+print ('There are', titlecase(chosed_text), 'titlecase words.')
+print ('There are', uppercase(chosed_text), 'uppercase words.')
+print ('There are', lowercase(chosed_text), 'lowercase words.')
+print ('There are', number_string(chosed_text), 'number strings.')
+
+
+
+
