@@ -1,29 +1,29 @@
-# def funciton for print 41 hypens
+# # def funciton for print 41 hypens
 def hypen_row ():
     print (41*'-')
 
-# welcome user, save login
-hypen_row()
-print('Welcome to the app. Please log in:')
-username = input ('USERNAME: ')
-password = input ('PASSWORD: ')
-
-# login names
-reggistered = {'bob':'123',
-'ann' : 'pass123',
-'mike' : 'password123',
-'liz' : 'pass123' }
-
-# if login sucessful continue main program,
-# if not repeat login again and again
-index = 1
-while index:
-    if  reggistered.get(username) == password:
-        break
-    else:
-        print('wrong password')
-        username = input('USERNAME: ')
-        password = input('PASSWORD: ')
+# # welcome user, save login
+# hypen_row()
+# print('Welcome to the app. Please log in:')
+# username = input ('USERNAME: ')
+# password = input ('PASSWORD: ')
+#
+# # login names
+# reggistered = {'bob':'123',
+# 'ann' : 'pass123',
+# 'mike' : 'password123',
+# 'liz' : 'pass123' }
+#
+# # if login sucessful continue main program,
+# # if not repeat login again and again
+# index = 1
+# while index:
+#     if  reggistered.get(username) == password:
+#         break
+#     else:
+#         print('wrong password')
+#         username = input('USERNAME: ')
+#         password = input('PASSWORD: ')
 
 # user chose text to analyse
 hypen_row()
@@ -115,15 +115,23 @@ print ('There are', number_string(chosed_text), 'number strings.')
 hypen_row()
 
 # found longest string in chosed_text
+
 longest = ''
 for i in chosed_text:
     if len (i) > len (longest):
         longest = i
-# print (longest)
+# print (len(longest))
 
 # count each words
 
-
+for i in range(1,len(longest)+1,):
+    print (i)
+    count_words = int() + 1
+    for word in chosed_text:
+        if len (word) == i:
+            print('*', count_words)
+            count_words += 1
 # while chosed_text:
+
 #     chosed_text.pop()
 #     print (len (i))
