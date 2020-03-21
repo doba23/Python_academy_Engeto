@@ -1,26 +1,35 @@
-# # welcome user, save login
-# print('Welcome to the app. Please log in:')
-# username = input ('USERNAME: ')
-# password = input ('PASSWORD: ')
-#
-# # login names
-# reggistered = {'bob':'123',
-# 'ann' : 'pass123',
-# 'mike' : 'password123',
-# 'liz' : 'pass123' }
-#
-# # if login sucessful continue main program,
-# # if not repeat login again and again
-# index = 1
-# while index:
-#     if  reggistered.get(username) == password:
-#         break
-#     else:
-#         print('wrong password')
-#         username = input('USERNAME: ')
-#         password = input('PASSWORD: ')
+# def funciton for print 41 hypens
+def hypen_row ():
+    print (41*'-')
+
+# welcome user, save login
+hypen_row()
+print('Welcome to the app. Please log in:')
+username = input ('USERNAME: ')
+password = input ('PASSWORD: ')
+
+# login names
+reggistered = {'bob':'123',
+'ann' : 'pass123',
+'mike' : 'password123',
+'liz' : 'pass123' }
+
+# if login sucessful continue main program,
+# if not repeat login again and again
+index = 1
+while index:
+    if  reggistered.get(username) == password:
+        break
+    else:
+        print('wrong password')
+        username = input('USERNAME: ')
+        password = input('PASSWORD: ')
+
+# user chose text to analyse
+hypen_row()
 print ('We have 3 texts to be analyzed.')
 index_of_texts = int (input ('Enter a number btw. 1 and 3 to select:')) -1
+hypen_row()
 
 '''
 author = 
@@ -96,13 +105,25 @@ def number_string (text):
             count += 1
     return (count)
 
+# print all of text analyse
 
 print ('There are', total_words(chosed_text), 'words in selected text.')
 print ('There are', titlecase(chosed_text), 'titlecase words.')
 print ('There are', uppercase(chosed_text), 'uppercase words.')
 print ('There are', lowercase(chosed_text), 'lowercase words.')
 print ('There are', number_string(chosed_text), 'number strings.')
+hypen_row()
+
+# found longest string in chosed_text
+longest = ''
+for i in chosed_text:
+    if len (i) > len (longest):
+        longest = i
+# print (longest)
+
+# count each words
 
 
-
-
+# while chosed_text:
+#     chosed_text.pop()
+#     print (len (i))
