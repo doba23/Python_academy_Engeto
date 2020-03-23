@@ -63,8 +63,9 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish, 
 garpike and stingray are also present.'''
 ]
-#   save chosed text as a word list
-chosed_text = (TEXTS[index_of_texts]).split()
+# Replace comas and full stops in chosed text. Save as a word list
+
+chosed_text = (TEXTS[index_of_texts]).replace('.','').replace(',','').split()
 
 # count total words
 def total_words (text):
@@ -111,7 +112,7 @@ print ('There are', total_words(chosed_text), 'words in selected text.')
 print ('There are', titlecase(chosed_text), 'titlecase words.')
 print ('There are', uppercase(chosed_text), 'uppercase words.')
 print ('There are', lowercase(chosed_text), 'lowercase words.')
-print ('There are', number_string(chosed_text), 'number strings.')
+print ('There are', number_string(chosed_text), 'numeric strings.')
 hypen_row()
 
 # found longest string in chosed_text
@@ -120,18 +121,27 @@ longest = ''
 for i in chosed_text:
     if len (i) > len (longest):
         longest = i
-# print (len(longest))
+
 
 # count each words
 
 for i in range(1,len(longest)+1,):
-    print (i)
-    count_words = int() + 1
+    count_words = 0
+    one_lenght = str(i) + ' '
     for word in chosed_text:
         if len (word) == i:
-            print('*', count_words)
+            one_lenght += '*'
             count_words += 1
-# while chosed_text:
+    if not count_words == 0:
+        print (one_lenght, count_words)
+hypen_row()
+# count number strings
+def number_count (text):
+    count = 0
+    for word in text:
+        if word.isnumeric():
+            count += word
+    return (count)
+print('If we summed all the numbers in this text we would get:', number_count(text))
 
-#     chosed_text.pop()
-#     print (len (i))
+hypen_row()
