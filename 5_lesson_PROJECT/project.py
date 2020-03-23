@@ -2,30 +2,30 @@
 def hypen_row ():
     print (41*'-')
 
-# # welcome user, save login
-# hypen_row()
-# print('Welcome to the app. Please log in:')
-# username = input ('USERNAME: ')
-# password = input ('PASSWORD: ')
-#
-# # login names
-# reggistered = {'bob':'123',
-# 'ann' : 'pass123',
-# 'mike' : 'password123',
-# 'liz' : 'pass123' }
-#
-# # if login sucessful continue main program,
-# # if not repeat login again and again
-# index = 1
-# while index:
-#     if  reggistered.get(username) == password:
-#         break
-#     else:
-#         print('wrong password')
-#         username = input('USERNAME: ')
-#         password = input('PASSWORD: ')
+# welcome user, save login
+hypen_row()
+print('Welcome to the app. Please log in:')
+username = input ('USERNAME: ')
+password = input ('PASSWORD: ')
 
-# user chose text to analyse
+# login names
+reggistered = {'bob':'123',
+'ann' : 'pass123',
+'mike' : 'password123',
+'liz' : 'pass123' }
+
+# if login sucessful continue main program,
+# if not repeat login again and again
+index = 1
+while index:
+    if  reggistered.get(username) == password:
+        break
+    else:
+        print('wrong password')
+        username = input('USERNAME: ')
+        password = input('PASSWORD: ')
+
+user chose text to analyse
 hypen_row()
 print ('We have 3 texts to be analyzed.')
 index_of_texts = int (input ('Enter a number btw. 1 and 3 to select:')) -1
@@ -135,13 +135,14 @@ for i in range(1,len(longest)+1,):
     if not count_words == 0:
         print (one_lenght, count_words)
 hypen_row()
+
 # count number strings
+
 def number_count (text):
     count = 0
     for word in text:
         if word.isnumeric():
-            count += word
+            count += int (word)
     return (count)
-print('If we summed all the numbers in this text we would get:', number_count(text))
-
+print('If we summed all the numbers in this text we would get:', number_count(chosed_text))
 hypen_row()
