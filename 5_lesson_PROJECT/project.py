@@ -1,4 +1,5 @@
-# # def funciton for print 41 hypens
+# Author : Dominik Bauchner
+# def funciton for print 41 hypens
 def hypen_row ():
     print (41*'-')
 
@@ -25,7 +26,7 @@ while index:
         username = input('USERNAME: ')
         password = input('PASSWORD: ')
 
-user chose text to analyse
+# user chose text to analyse
 hypen_row()
 print ('We have 3 texts to be analyzed.')
 index_of_texts = int (input ('Enter a number btw. 1 and 3 to select:')) -1
