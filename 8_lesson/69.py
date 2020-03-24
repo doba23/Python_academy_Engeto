@@ -10,6 +10,6 @@ def change_coins (number):
         # deletes empty dict items
         if dict[item] == 0:
             del dict [item]
-    return (number, dict)
+    return (dict)
 
 print (change_coins(109))
