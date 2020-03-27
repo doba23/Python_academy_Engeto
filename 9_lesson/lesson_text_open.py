@@ -12,9 +12,3 @@ print ('raw text in test.txt:')
 print (repr(text))
 
 file.close()
-
-# zapisovani do souboru
-file = open('test.txt','w')
-print (file.write('This is the third line\nThis is the fourth line'))
-print (file)
-file.close()
