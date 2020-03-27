@@ -10,7 +10,7 @@ print(file.read())
 print(file.tell())
 
 # Otevreni relativni cestou - skript se musi nachazet tam, kde soubor!
-file = open('test.txt')
+# file = open('test.txt')
 # Vraceni se na zacatek souboru
 print( file.seek(0))
 
