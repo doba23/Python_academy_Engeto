@@ -3,28 +3,28 @@
 def hypen_row ():
     print (41*'-')
 
-# welcome user, save login
-hypen_row()
-print('Welcome to the app. Please log in:')
-username = input ('USERNAME: ')
-password = input ('PASSWORD: ')
-
-# login names
-reggistered = {'bob':'123',
-'ann' : 'pass123',
-'mike' : 'password123',
-'liz' : 'pass123' }
-
-# if login sucessful continue main program,
-# if not repeat login again and again
-index = 1
-while index:
-    if  reggistered.get(username) == password:
-        break
-    else:
-        print('wrong password')
-        username = input('USERNAME: ')
-        password = input('PASSWORD: ')
+# # welcome user, save login
+# hypen_row()
+# print('Welcome to the app. Please log in:')
+# username = input ('USERNAME: ')
+# password = input ('PASSWORD: ')
+#
+# # login names
+# reggistered = {'bob':'123',
+# 'ann' : 'pass123',
+# 'mike' : 'password123',
+# 'liz' : 'pass123' }
+#
+# # if login sucessful continue main program,
+# # if not repeat login again and again
+# index = 1
+# while index:
+#     if  reggistered.get(username) == password:
+#         break
+#     else:
+#         print('wrong password')
+#         username = input('USERNAME: ')
+#         password = input('PASSWORD: ')
 
 # user chose text to analyse
 hypen_row()
@@ -80,7 +80,15 @@ count_uppercase = 0
 count_lowercase = 0
 count_numeric = 0
 number_counted = 0
+longest = ''
+word_len = []
+
 for word in chosed_text:
+    # found longest word
+    if len (word) > len (longest):
+        longest = word
+    # append words lenght for next use
+    word_len.append(len(word))
     # count titlecase words
     if word[0].isupper():
         count_titlecase += 1
@@ -96,36 +104,37 @@ for word in chosed_text:
     #count total number value
         number_counted += int(word)
 
-
 # print all of text analyse
+
 a = 'There are'
 print ('{} {} words in selected text.'.format (a, total_words(chosed_text)))
 print ('{} {} titlecase words.'.format(a, count_titlecase))
 print ('{} {} uppercase words.'.format(a, count_uppercase))
 print ('{} {} lowercase words.'.format(a, count_lowercase))
-print ('{} {} numeric strings.'.format(a, count_numeric))
+print ('{} {} number strings.'.format(a, count_numeric))
 hypen_row()
 
-# found longest string in chosed_text
-
-longest = ''
-for i in chosed_text:
-    if len (i) > len (longest):
-        longest = i
-
-
 # count each words
-for i in range(1,len(longest)+1,):
-    count_words = 0
-    one_lenght = str(i) + ' '
-    for word in chosed_text:
-        if len (word) == i:
-            one_lenght += '*'
-            count_words += 1
-    if not count_words == 0:
+
+for i in range(1,len(longest)+1,): # outer iteration print rows based on lenghts of words (until range reaches lenght of longest word)
+    count_words = 0 # count quantity of one lenght of word
+    one_lenght = str(i) + ' ' # same scheme for each iteration
+    for number in word_len: # inner iteration - print occurance of one lenght word
+        if number == i: # if lenght of word is same like number of outer iteration do next steps
+            one_lenght += '*' # add one star
+            count_words += 1 # addition one
+    if count_words != 0: # print only word occurances with non zero lenghts
         print (one_lenght, count_words)
+
 hypen_row()
 
 # count number strings
 print('If we summed all the numbers in this text we would get:', number_counted)
 hypen_row()
+
+# try another solution of word count, unused
+# sort word lenght list
+word_len.sort()
+# hold sequence of unique list items
+word_sequence = list(set(word_len))
+# count quantity of each word lenght
