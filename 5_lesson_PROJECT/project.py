@@ -75,45 +75,32 @@ def total_words (text):
         total += 1
     return (total)
 
-# count titlecase words
-def titlecase (text):
-    count = 0
-    for word in text:
-        if word[0].isupper():
-            count += 1
-    return (count)
+count_titlecase = 0
+count_uppercase = 0
+count_lowercase = 0
+count_numeric = 0
+for word in chosed_text:
+    # count titlecase words
+    if word[0].isupper():
+        count_titlecase += 1
+    # count uppercase words
+    if word.isupper():
+        count_uppercase += 1
+    # count lowercase words
+    if word.islower():
+        count_lowercase += 1
+    # count number strings
+    if word.isnumeric():
+        count_numeric += 1
 
-# count uppercase words
-def uppercase (text):
-    count = 0
-    for word in text:
-        if word.isupper():
-            count += 1
-    return (count)
-
-# count lowercase words
-def lowercase (text):
-    count = 0
-    for word in text:
-        if word.islower():
-            count += 1
-    return (count)
-
-# count number strings
-def number_string (text):
-    count = 0
-    for word in text:
-        if word.isnumeric():
-            count += 1
-    return (count)
 
 # print all of text analyse
 
 print ('There are', total_words(chosed_text), 'words in selected text.')
-print ('There are', titlecase(chosed_text), 'titlecase words.')
-print ('There are', uppercase(chosed_text), 'uppercase words.')
-print ('There are', lowercase(chosed_text), 'lowercase words.')
-print ('There are', number_string(chosed_text), 'numeric strings.')
+print ('There are', count_titlecase, 'titlecase words.')
+print ('There are', count_uppercase, 'uppercase words.')
+print ('There are', count_lowercase, 'lowercase words.')
+print ('There are', count_numeric, 'numeric strings.')
 hypen_row()
 
 # found longest string in chosed_text
