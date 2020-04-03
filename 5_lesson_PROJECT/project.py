@@ -120,7 +120,7 @@ for i in range(1,len(longest)+1,): # outer iteration print rows based on lenghts
     count_words = 0 # count quantity of one lenght of word
     one_lenght = str(i) + ' ' # same scheme for each iteration
     for number in word_len: # inner iteration - print occurance of one lenght word
-        if number == i: # if lenght of word is same like number of outer iteration do next steps
+        if number == i: # if lenght of word is same like number of outer  iteration do next steps
             one_lenght += '*' # add one star
             count_words += 1 # addition one
     if count_words != 0: # print only word occurances with non zero lenghts
@@ -132,7 +132,7 @@ hypen_row()
 print('If we summed all the numbers in this text we would get:', number_counted)
 hypen_row()
 
-# try another solution of word count, unused
+# UNUSED, try another solution of word count
 # sort word lenght list
 word_len.sort()
 # hold sequence of unique list items
