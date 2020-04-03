@@ -79,6 +79,7 @@ count_titlecase = 0
 count_uppercase = 0
 count_lowercase = 0
 count_numeric = 0
+number_counted = 0
 for word in chosed_text:
     # count titlecase words
     if word[0].isupper():
@@ -92,15 +93,17 @@ for word in chosed_text:
     # count number strings
     if word.isnumeric():
         count_numeric += 1
+    #count total number value
+        number_counted += int(word)
 
 
 # print all of text analyse
-
-print ('There are', total_words(chosed_text), 'words in selected text.')
-print ('There are', count_titlecase, 'titlecase words.')
-print ('There are', count_uppercase, 'uppercase words.')
-print ('There are', count_lowercase, 'lowercase words.')
-print ('There are', count_numeric, 'numeric strings.')
+a = 'There are'
+print ('{} {} words in selected text.'.format (a, total_words(chosed_text)))
+print ('{} {} titlecase words.'.format(a, count_titlecase))
+print ('{} {} uppercase words.'.format(a, count_uppercase))
+print ('{} {} lowercase words.'.format(a, count_lowercase))
+print ('{} {} numeric strings.'.format(a, count_numeric))
 hypen_row()
 
 # found longest string in chosed_text
@@ -112,7 +115,6 @@ for i in chosed_text:
 
 
 # count each words
-
 for i in range(1,len(longest)+1,):
     count_words = 0
     one_lenght = str(i) + ' '
@@ -125,12 +127,5 @@ for i in range(1,len(longest)+1,):
 hypen_row()
 
 # count number strings
-
-def number_count (text):
-    count = 0
-    for word in text:
-        if word.isnumeric():
-            count += int (word)
-    return (count)
-print('If we summed all the numbers in this text we would get:', number_count(chosed_text))
+print('If we summed all the numbers in this text we would get:', number_counted)
 hypen_row()
