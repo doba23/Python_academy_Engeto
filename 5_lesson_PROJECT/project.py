@@ -114,7 +114,7 @@ print ('{} {} lowercase words.'.format(a, count_lowercase))
 print ('{} {} number strings.'.format(a, count_numeric))
 hypen_row()
 
-# count each words
+# count each words occurance
 
 for i in range(1,len(longest)+1,): # outer iteration print rows based on lenghts of words (until range reaches lenght of longest word)
     count_words = 0 # count quantity of one lenght of word
