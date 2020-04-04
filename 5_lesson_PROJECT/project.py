@@ -3,28 +3,28 @@
 def hypen_row ():
     print (41*'-')
 
-# # welcome user, save login
-# hypen_row()
-# print('Welcome to the app. Please log in:')
-# username = input ('USERNAME: ')
-# password = input ('PASSWORD: ')
-#
-# # login names
-# reggistered = {'bob':'123',
-# 'ann' : 'pass123',
-# 'mike' : 'password123',
-# 'liz' : 'pass123' }
-#
-# # if login sucessful continue main program,
-# # if not repeat login again and again
-# index = 1
-# while index:
-#     if  reggistered.get(username) == password:
-#         break
-#     else:
-#         print('wrong password')
-#         username = input('USERNAME: ')
-#         password = input('PASSWORD: ')
+# welcome user, save login
+hypen_row()
+print('Welcome to the app. Please log in:')
+username = input ('USERNAME: ')
+password = input ('PASSWORD: ')
+
+# login names
+reggistered = {'bob':'123',
+'ann' : 'pass123',
+'mike' : 'password123',
+'liz' : 'pass123' }
+
+# if login sucessful continue main program,
+# if not repeat login again and again
+index = 1
+while index:
+    if  reggistered.get(username) == password:
+        break
+    else:
+        print('wrong password')
+        username = input('USERNAME: ')
+        password = input('PASSWORD: ')
 
 # user chose text to analyse
 hypen_row()
