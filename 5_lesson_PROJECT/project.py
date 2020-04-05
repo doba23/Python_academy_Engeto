@@ -1,4 +1,6 @@
 # Author : Dominik Bauchner
+# EDIT: Just one text iteration
+
 # def funciton for print 41 hypens
 def hypen_row ():
     print (41*'-')
@@ -114,27 +116,24 @@ print ('{} {} lowercase words.'.format(a, count_lowercase))
 print ('{} {} number strings.'.format(a, count_numeric))
 hypen_row()
 
-# count each words occurance
+# another solution of word count
+# sort word lenght list
+word_len.sort()
+# hold sequence of unique list items
+word_sequence = list(set(word_len))
 
-for i in range(1,len(longest)+1,): # outer iteration print rows based on lenghts of words (until range reaches lenght of longest word)
+# count quantity of each word lenght
+for row in word_sequence: # outer iteration print rows based on lenghts of words
     count_words = 0 # count quantity of one lenght of word
-    one_lenght = str(i) + ' ' # same scheme for each iteration
-    for number in word_len: # inner iteration - print occurance of one lenght word
-        if number == i: # if lenght of word is same like number of outer  iteration do next steps
-            one_lenght += '*' # add one star
-            count_words += 1 # addition one
-    if count_words != 0: # print only word occurances with non zero lenghts
-        print (one_lenght, count_words)
+    one_lenght = str(row) + ' ' # same scheme for each iteration
+    for number in word_len:  # inner iteration - print occurance of one lenght word
+        if number == row:
+            one_lenght += '*'  # add one star
+            count_words += 1  # addition one
+    print(one_lenght, count_words)
 
 hypen_row()
 
 # count number strings
 print('If we summed all the numbers in this text we would get:', number_counted)
 hypen_row()
-
-# UNUSED, try another solution of word count
-# sort word lenght list
-word_len.sort()
-# hold sequence of unique list items
-word_sequence = list(set(word_len))
-# count quantity of each word lenght
