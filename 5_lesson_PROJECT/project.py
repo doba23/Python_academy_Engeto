@@ -1,5 +1,5 @@
 # Author : Dominik Bauchner
-# EDIT: Just one text iteration
+# EDIT: Two text iteration
 
 # def funciton for print 41 hypens
 def hypen_row ():
