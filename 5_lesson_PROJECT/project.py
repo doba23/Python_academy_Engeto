@@ -70,13 +70,6 @@ garpike and stingray are also present.'''
 
 chosed_text = (TEXTS[index_of_texts]).replace('.','').replace(',','').split()
 
-# # count total words
-# def total_words (text):
-#     total = 0
-#     for word in text:
-#         total += 1
-#     return (total)
-
 total_words = 0
 count_titlecase = 0
 count_uppercase = 0
