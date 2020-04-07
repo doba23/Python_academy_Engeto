@@ -76,7 +76,6 @@ count_uppercase = 0
 count_lowercase = 0
 count_numeric = 0
 number_counted = 0
-longest = ''
 word_len = [] # save lenght of words
 
 for word in chosed_text:
