@@ -1,5 +1,5 @@
 # Author : Dominik Bauchner
-# EDIT: Two text iteration
+# EDITED: Just one text iteration
 
 # def funciton for print 41 hypens
 def hypen_row ():
@@ -70,22 +70,25 @@ garpike and stingray are also present.'''
 
 chosed_text = (TEXTS[index_of_texts]).replace('.','').replace(',','').split()
 
-# count total words
-def total_words (text):
-    total = 0
-    for word in text:
-        total += 1
-    return (total)
+# # count total words
+# def total_words (text):
+#     total = 0
+#     for word in text:
+#         total += 1
+#     return (total)
 
+total_words = 0
 count_titlecase = 0
 count_uppercase = 0
 count_lowercase = 0
 count_numeric = 0
 number_counted = 0
 longest = ''
-word_len = []
+word_len = [] # save lenght of words
 
 for word in chosed_text:
+    # count total words
+    total_words += 1
     # found longest word
     if len (word) > len (longest):
         longest = word
@@ -106,10 +109,10 @@ for word in chosed_text:
     #count total number value
         number_counted += int(word)
 
-# print all of text analyse
+# print all of text analysed
 
 a = 'There are'
-print ('{} {} words in selected text.'.format (a, total_words(chosed_text)))
+print ('{} {} words in selected text.'.format(a, total_words))
 print ('{} {} titlecase words.'.format(a, count_titlecase))
 print ('{} {} uppercase words.'.format(a, count_uppercase))
 print ('{} {} lowercase words.'.format(a, count_lowercase))
