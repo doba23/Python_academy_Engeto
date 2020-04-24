@@ -81,9 +81,6 @@ word_len = [] # save lenght of words
 for word in chosed_text:
     # count total words
     total_words += 1
-    # found longest word
-    if len (word) > len (longest):
-        longest = word
     # append words lenght for next use
     word_len.append(len(word))
     # count titlecase words
