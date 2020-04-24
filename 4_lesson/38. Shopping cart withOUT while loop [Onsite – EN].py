@@ -14,15 +14,12 @@ item3 = input('{}'.format('third item price:'.ljust(21)))
 
 # 2. Add them into a list representing the shopping cart,
 lst = []
-lst.append(item1)
-lst.append(item2)
-lst.append(item3)
+lst.append(int(item1))
+lst.append(int(item2))
+lst.append(int(item3))
 
 # 3. Calculate the total price,
-total = 0
-while lst:
-    total += int(lst[0])
-    lst = lst[1:]
+total = lst[0]+lst[1]+lst[2]
 
 # 4. Print the cart content and the total price.
 hyp()
