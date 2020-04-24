@@ -1,9 +1,16 @@
+def hyp ():
+    print (23*'-')
+
+def equ():
+    print(23 * '=')
 # Creating the shopping cart
 
-# 1. Ask the user for 3 prices (numbers),
-item1= input('Enter first item:')
-item2= input('Enter second item:')
-item3= input('Enter third item:')
+# 1. Ask the user for 3 prices (numbers)
+print('Please enter the:')
+hyp()
+item1 = input('{}'.format('first item price:'.ljust(21)))
+item2 = input('{}'.format('second item price:'.ljust(21)))
+item3 = input('{}'.format('third item price:'.ljust(21)))
 
 # 2. Add them into a list representing the shopping cart,
 lst = []
@@ -18,8 +25,9 @@ while lst:
     lst = lst[1:]
 
 # 4. Print the cart content and the total price.
-r='='
-print('{}{}{}'.format('First item price', r, item1))
-print('{}{}{}'.format('Second item price', r, item2))
-print('{}{}{}'.format('Third item price', r, item3))
-print('{}{}{}'.format('Total price', r, total))
+hyp()
+print('{}{}'.format('First item price is'.ljust(21), item1))
+print('{}{}'.format('Second item price is'.ljust(21), item2))
+print('{}{}'.format('Third item price is'.ljust(21), item3))
+equ()
+print('{}{}'.format('Total price is'.ljust(21), total))
