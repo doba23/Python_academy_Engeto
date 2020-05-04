@@ -108,6 +108,19 @@ print ('{} {} lowercase words.'.format(a, count_lowercase))
 print ('{} {} number strings.'.format(a, count_numeric))
 hypen_row()
 
+#####################
+#try another solution
+lst_word = []
+# append words lenght
+for i in word_len:
+    try:
+        lst_word[i-1] += 1
+    except:
+        lst_word.insert(i-1,1)
+
+print (lst_word)
+#####################
+
 # another solution of word count
 # sort word lenght list
 word_len.sort()
