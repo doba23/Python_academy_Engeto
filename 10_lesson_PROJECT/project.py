@@ -5,8 +5,8 @@ print ('Hi there!','\n'
        'Let\'s play a bulls and cows game.')
 
 def gen_number ():
-       secret = []
-       j = 0 # pomocny index pro urceni iterace (slo bz misto toho pouzit enumerate)
+       secret = [] # list pro ukladani vygenerovanych cislic
+
        for i,j in  enumerate (range (4)):
               i = random.randint(0, 9)
               if j == 1: # druhy pruchod iterace
@@ -21,6 +21,19 @@ def gen_number ():
               secret.append(i)
 
        return secret
+
+
+
+def user_input ():
+       digit = str (input ('Enter a number:'))
+       lst_user = []
+       for i in digit:
+              lst_user.append(int(i))
+
+       return (lst_user)
+
+print (user_input())
+
 print (gen_number())
 
 
