@@ -1,6 +1,6 @@
 import sys
 import test
-
+test.path
 print ()
 
 print ('Name from main: ', __name__)
