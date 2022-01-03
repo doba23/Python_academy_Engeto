@@ -18,11 +18,10 @@ delka_jmena = len(cele_jmeno)
 print ('Delka jmena je: ', delka_jmena)
 
 # Tisk ohranicene promenne cele_jmeno
-#print ('='*delka_jmena)
-#print (cele_jmeno)
-#print ('='*delka_jmena)
 
-def tisk_nakonci(delka_jmena,znak):
-    return print (znak * delka_jmena)
+def tisk_nakonci():
+    print ('=' * delka_jmena)
 
-tisk_nakonci(delka_jmena,'=')
+tisk_nakonci()
+print (cele_jmeno)
+tisk_nakonci()
