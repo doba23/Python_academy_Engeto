@@ -4,17 +4,12 @@ b = int(input())
 if a>b:
     d=b
     # print('delenec je b')
+    while a % d !=0:
+        d = d -1
 else:
     d=a
     # print('delenec je a')
-
-# v = a % d
-
-if a > b:
-    while a % d:
-        d = d -1
-if b > a:
-    while b % d:
+    while b % d !=0:
         d = d - 1
 
 print (d)
